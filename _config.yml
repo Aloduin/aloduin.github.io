@@ -8,7 +8,7 @@ subtitle: AI行业从业者 / 大模型应用 / 医疗AI / Agent
 description: '个人博客、论文阅读笔记'
 keywords: AI, LLM, Agent, BCI
 author: Aloduin
-language: zh
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -41,7 +41,10 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
