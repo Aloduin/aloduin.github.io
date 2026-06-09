@@ -71,14 +71,13 @@ REVE 是一个基于 Transformer 的 EEG masked autoencoder。
 
 ```mermaid
 flowchart LR
-    A[Raw EEG<br/>C × T] --> B[Temporal Patchify<br/>按通道切时间片]
+    A[Raw EEG   C × T] --> B[Temporal Patchify   按通道切时间片]
     B --> C[Patch Embedding]
-    C --> D[4D Position Encoding<br/>x,y,z,t]
+    C --> D[4D Position Encoding  x,y,z,t]
     D --> E[Spatio-temporal Block Masking]
     E --> F[Transformer Encoder]
     F --> G[MAE Decoder]
     G --> H[Reconstruct Masked EEG Patches]
-
     F --> I[Global Token / Attention Pooling]
     I --> J[Auxiliary Reconstruction]
 ```
